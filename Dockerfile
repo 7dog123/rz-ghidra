@@ -1,5 +1,7 @@
 FROM ubuntu:latest
 
+ENV DEBIAN_FRONTEND noninteractive
+
 RUN apt-get update
 RUN apt-get -y install git g++ cmake pkg-config flex bison python3 python3-pip ninja-build qt5-default && \
 	pip3 install meson
