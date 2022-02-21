@@ -16,8 +16,8 @@ RUN cd /root && \
 RUN git clone --recurse-submodules --depth 1 https://github.com/rizinorg/rz-ghidra && \
         cd rz-ghidra && \
         mkdir build && cd build && \
-        cmake -DCMAKE_INSTALL_PREFIX=~/usr .. && \
+        cmake -DCMAKE_INSTALL_PREFIX=/.local .. && \
         make && make install
 
-RUN ls /usr/bin
+RUN ls /.local
 
